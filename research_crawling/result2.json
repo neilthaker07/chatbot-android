@@ -1,0 +1,58 @@
+[{
+  "loadedUrl": "https://android.stackexchange.com/questions/98539/how-do-i-prevent-android-from-going-to-sleep",
+  "loadingStartedAt": "2018-03-04T18:57:07.034Z",
+  "loadingFinishedAt": "2018-03-04T18:57:07.926Z",
+  "loadErrorCode": null,
+  "pageFunctionStartedAt": "2018-03-04T18:57:08.513Z",
+  "pageFunctionFinishedAt": "2018-03-04T18:57:08.540Z",
+  "isMainFrame": true,
+  "postData": null,
+  "contentType": null,
+  "method": "GET",
+  "willLoad": true,
+  "errorInfo": "",
+  "pageFunctionResult": [
+    {
+      "question": "How do I prevent Android from going to sleep?"
+    },
+    {
+      "answer": "\nDepending on you tablet, you may have the option to set the screen timeout to \"never\" under Settings > Display > Sleep.\n\nIf you do not have this option, you can enable Settings > Developer options > Stay awake. This will keep your tablet awake while it is charging. This could be useful if your tablet does not support the \"never\" screen timeout. \n\nNote: If you don't see Developer options in Settings, it may be made available by going to to Settings > About > Build number. Developer options should appear after tapping the build number several times.\n    "
+    },
+    {
+      "question": "45555"
+    }
+  ],
+  "interceptRequestData": null,
+  "downloadedBytes": 986205,
+  "queuePosition": "LAST",
+  "proxy": "http://172.31.59.193:55555",
+  "responseStatus": 200,
+  "responseHeaders": {
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Encoding": "gzip",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Request-Guid": "ffce2203-6c39-49aa-8b59-36858f86f897",
+    "Strict-Transport-Security": "max-age=15552000",
+    "Accept-Ranges": "bytes",
+    "Date": "Sun, 04 Mar 2018 18:57:07 GMT",
+    "Via": "1.1 varnish",
+    "Age": "0",
+    "Connection": "keep-alive",
+    "X-Served-By": "cache-dca17751-DCA",
+    "X-Cache": "MISS",
+    "X-Cache-Hits": "0",
+    "X-Timer": "S1520189827.086280,VS0,VE26",
+    "Vary": "Accept-Encoding,Fastly-SSL",
+    "X-DNS-Prefetch-Control": "off",
+    "Cache-Control": "private"
+  },
+  "id": "FIhkSjqCImZ0H32",
+  "url": "https://android.stackexchange.com/questions/98539",
+  "requestedAt": "2018-03-04T18:57:06.843Z",
+  "uniqueKey": "https://android.stackexchange.com/questions/98539",
+  "type": "StartUrl",
+  "label": null,
+  "referrerId": null,
+  "depth": 0,
+  "storageBytes": 1811
+}]
