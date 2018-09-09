@@ -1,0 +1,53 @@
+Question,Entities,Answer
+Testing Menu,menu_test,*#*#4636#*#*
+Display Info about device,device,*#*#4636#*#*
+Factory Restore,factory_restore,*#*#7780#*#*
+Camera Information,camera,*#*#34971539#*#*
+"Completely Wipe device, install stock firmware",wipe,*2767*3855#
+Backup all media files,backup_media,*#*#273283*255*663282*#*#*
+Wireless LAN Test,wireless_lan_test,*#*#232339#*#* OR *#*#526#*#*
+Change Power button behavior,power_button,*#*#7594#*#*
+Quick GPS Test,gps_quick_test,*#*#1472365#*#*
+Test mode for service activity,service_activity,*#*#197328640#*#*
+WiFi Mac Address,wifi_mac,*#*#232338#*#*
+Another GPS test,gps_test,*#*#1575#*#*
+Packet Loopback Test,packet_loopback,*#*#0283#*#*
+Audio Test,audio,*#*#0673#*#* OR *#*#0289#*#*
+Vibration and Backlight test,vibration|backlight,*#*#0842#*#*
+Check touch screen version,touchscreen_version,*#*#2663#*#*
+LCD test,lcd,*#*#0*#*#*
+Touch Screen test,touchscreen,*#*#2664#*#*
+Proximity sensor test,sensor,*#*#0588#*#*
+RAM version,ram_version,*#*#3264#*#*
+Bluetooth test,bluetooth,*#*#232331#*#*
+Field Test,field,*#*#7262626#*#*
+Check Bluetooth device address,bluetooth_device_address,*#*#232337#*#
+Google Talk service monitoring,google_talk,*#*#8255#*#*
+"PDA, Hardware, Phone and RF Call Date info",pda|hardware|phone|rfcall,*#*#4986*2650468#*#*
+PDA and Phone firmware check,pda_firmware|phone_firmware,*#*#1234#*#*
+FTA hardware version,fta_hw,*#*#2222#*#*
+FTA software version,fda_sw,*#*#1111#*#*
+Displays IMEI number,imei,*#06#
+Enables voice dialing logging mode,voice_dial_enable,*#*#8351#*#*
+Disables voice dialing logging mode,voice_dial_disable,*#*#8350#*#*
+Brings up Epst menu,epst_menu,##778 +call
+Displays Build time and change list number,buildtime,*#*#44336#*#*
+Remove Google account setting,account_settings_remove,*#*#7780#*#*
+Reinstall the firmware,firmware_reinstall,*2767*3855#
+Used to enter into Service mode,service_mode,*#*#197328640#*#*
+Battery Status,battery_status,*#0228#
+Data create menu,create_menu,*#273283*255*3282*#
+Data usage status,data_usage,*#3282*727336*#
+OTA update menu,ota_update,*#8736364#
+RF band selection,rf_band,*#2263#
+Diagnostic configuration,diagnostic,*#9090#
+USB 12C mode control,usb_12c,*#7284#
+USB logging control,usb_logging,*#872564#
+Debug dump menu,debug_dump,*#746#
+System dump mode,system_dump,*#9900#
+Shows Build time change list number,build_time,*#*#44336#*#*
+NAND flash serial number,nand_flash_serial,*#03#
+Real time clock test,clock_test,*#0782#
+Light sensor test,light_sensor_test,*#0589#
+Quick test menu,quick_test_menu,*#7353#
+Execute from Emergency dial screen to unlock PUK code,unlock_puk_code,**05***#
