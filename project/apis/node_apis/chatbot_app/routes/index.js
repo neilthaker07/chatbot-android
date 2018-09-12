@@ -1,5 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var fs = require('fs');
+var path = require('path');
+var mongoose = require("mongoose");
+var Grid = require('gridfs-stream');
 
 router.get('/', function(req, res, next) {
 });
@@ -27,15 +31,52 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 	  collection.find({[String(intentInput)] : {$exists: true}}).toArray(function(err, result){
 	    if (err) throw err;
 
-		/*console.log(result);*/
+		//console.log(result);
 
 		var answer = result[0][intentInput][entityInput];
 		console.log("Answer : "+answer);
 
-	    res.json({
-		    answer: answer
-	  	});
-	    
+		// Image fetching
+		if(intentInput.includes('ui_') && answer!==null && answer !=='')
+		{
+			// gridfs
+			mongoose.connect('mongodb://localhost:27017/'+dbName);
+			var conn = mongoose.connection;
+
+			Grid.mongo = mongoose.mongo;
+			
+			conn.once('open', function(){
+
+				var gfs = Grid(conn.db);
+				var writestream = fs.createWriteStream(path.join(__dirname, '/'+answer));
+				try {
+
+					var readstream = gfs.createReadStream({
+						_id: answer
+					});
+
+					readstream.pipe(writestream, function(){
+						res.sendFile(path.join(__dirname, '/'+answer));	
+					});
+					/*writestream.on('close', function(){
+						console.log(" written new file image - ");
+					});*/
+
+				} 
+				catch (err) {
+					log.error("image not found....");
+				    log.error(err);
+				}
+
+			});
+		}
+		else
+		{
+			res.json({
+			    answer: answer
+		  	});
+		}
+
 	    db.close();
 	  });
 
