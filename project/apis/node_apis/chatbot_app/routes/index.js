@@ -31,16 +31,16 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 	  collection.find({[String(intentInput)] : {$exists: true}}).toArray(function(err, result){
 	    if (err) throw err;
 
-		//console.log(result);
-
 		var answer = result[0][intentInput][entityInput];
 		console.log("Answer : "+answer);
+		hasImage = false;
 
-		// Image fetching
+		// Image fetch on the front end directly
 		if(intentInput.includes('ui_') && answer!==null && answer !=='')
 		{
+			hasImage = true;
 			// gridfs
-			mongoose.connect('mongodb://localhost:27017/'+dbName);
+			/*mongoose.connect('mongodb://localhost:27017/'+dbName); // proper ip name of EC2
 			var conn = mongoose.connection;
 
 			Grid.mongo = mongoose.mongo;
@@ -58,9 +58,9 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 					readstream.pipe(writestream, function(){
 						res.sendFile(path.join(__dirname, '/'+answer));	
 					});
-					/*writestream.on('close', function(){
-						console.log(" written new file image - ");
-					});*/
+					//writestream.on('close', function(){
+					//	console.log(" written new file image - ");
+					//});
 
 				} 
 				catch (err) {
@@ -68,14 +68,13 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 				    log.error(err);
 				}
 
-			});
+			});*/
 		}
-		else
-		{
-			res.json({
-			    answer: answer
-		  	});
-		}
+		
+		res.json({
+		    answer: answer,
+		    image: hasImage
+	  	});
 
 	    db.close();
 	  });
