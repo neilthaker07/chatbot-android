@@ -27,3 +27,9 @@ go to tmux : tmux attach -t 0
 save the command in tmux: Ctrl+b
 detach : d
 
+
+
+MongoDB Server IP: 13.58.23.159
+DB Username: adminUser
+Password: purveshFALL2018
+Datbase name: admin
