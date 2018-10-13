@@ -19,3 +19,7 @@ cd tensorflow
  
 python tflow.py  
  
+
+
+sudo ssh -i cmpe295b.pem ubuntu@13.58.23.159  
+
