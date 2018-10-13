@@ -21,8 +21,8 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 	var collectionName = "intent";
 
 	var mongoClient = require('mongodb').MongoClient;
-	var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159/?authSource=admin&authMechanism=SCRAM-SHA-1";
-	//var url = "mongodb://localhost:27017";
+	//var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159/?authSource=admin&authMechanism=SCRAM-SHA-1";
+	var url = "mongodb://localhost:27017";
 
 	mongoClient.connect(url, function(err1, db) {
 		
@@ -49,6 +49,40 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 					{
 						hasImage = true;
 						// gridfs code to save image is below.
+						// gridfs
+						
+						mongoose.connect('mongodb://localhost:27017/'+dbName); // proper ip name of EC2
+						var conn = mongoose.connection;
+
+						Grid.mongo = mongoose.mongo;
+
+						conn.once('open', function(){
+
+							var gfs = Grid(conn.db);
+							var writestream = fs.createWriteStream(path.join(__dirname, '/'+answer));
+							try {
+
+								var readstream = gfs.createReadStream({
+									_id: answer
+								});
+
+								console.log("readstream:::::"+readstream);
+								answer = readstream;
+
+								/*readstream.pipe(writestream, function(){
+									res.sendFile(path.join(__dirname, '/'+answer));	
+								});*/
+								//writestream.on('close', function(){
+								//	console.log(" written new file image - ");
+								//});
+
+							} 
+							catch (err3) {
+								console.log("image not found....");
+							    console.log(err3);
+							}
+
+						});
 					}
 
 					res.json({
@@ -77,33 +111,3 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 
 module.exports = router;
 
-// gridfs
-/*mongoose.connect('mongodb://localhost:27017/'+dbName); // proper ip name of EC2
-var conn = mongoose.connection;
-
-Grid.mongo = mongoose.mongo;
-
-conn.once('open', function(){
-
-	var gfs = Grid(conn.db);
-	var writestream = fs.createWriteStream(path.join(__dirname, '/'+answer));
-	try {
-
-		var readstream = gfs.createReadStream({
-			_id: answer
-		});
-
-		readstream.pipe(writestream, function(){
-			res.sendFile(path.join(__dirname, '/'+answer));	
-		});
-		//writestream.on('close', function(){
-		//	console.log(" written new file image - ");
-		//});
-
-	} 
-	catch (err) {
-		log.error("image not found....");
-	    log.error(err);
-	}
-
-});*/
