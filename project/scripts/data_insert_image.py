@@ -2,6 +2,7 @@ from pymongo import MongoClient
 import re, gridfs, csv
   
 try: 
+    #conn = MongoClient("mongodb://adminUser:purveshFALL2018@13.58.23.159:27017") 
     conn = MongoClient() 
     print("Connected successfully!!!") 
 except:   
