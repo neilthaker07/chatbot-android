@@ -115,8 +115,6 @@ def pad_seq(seq, lookup, maxlen):
     return indices + [0]*(maxlen - len(seq))
 
 
-def filter_line(line, whitelist):
-    return ''.join([ ch for ch in line if ch in whitelist ])
 
 def process_data():
 

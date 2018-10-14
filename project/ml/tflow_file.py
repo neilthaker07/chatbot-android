@@ -170,10 +170,10 @@ def response(sentence, userID='123', show_details=False):
 
             results.pop(0)
 
-response('Can you please tell me what is store?')
-response('flows')
-response('bro, whats a Toasty?')
-response('tell me something about lottie.')
+print(response('Can you please tell me what is store?'))
+print(response('flows'))
+print(response('bro, whats a Toasty?'))
+print(response('tell me something about lottie.'))
 # classify('is your shop open today?')
 # response('is your shop open today?')
 # response('do you take cash?')

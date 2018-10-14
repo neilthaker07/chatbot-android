@@ -14,23 +14,22 @@ db = conn.Assistant_Chatbot_Android_Developer
 collection = db.intent
 
 imagePath = '/home/neil/Neil_Work/MS_SJSU/295A/ui_component_repo/awesome-android-ui'
-fileWithIntent=['ui_actionbar','ui_animation','ui_button','ui_calendar','ui_dialog','ui_effect','ui_graph','ui_image','ui_label','ui_layout','ui_list','ui_material','ui_menu','ui_other','ui_parallax','ui_progress','ui_seekbar','ui_viewpager']
+fileNames=['ui_actionbar','ui_animation','ui_button','ui_calendar','ui_dialog','ui_effect','ui_graph','ui_image','ui_label','ui_layout','ui_list','ui_material','ui_menu','ui_other','ui_parallax','ui_progress','ui_seekbar','ui_viewpager']
+
+intent = {}
+intent['ui_element']={}  # code is intent name for the document
 
 j=0
-for i in range(len(fileWithIntent)):
+for i in range(len(fileNames)):
     # read csv file to get data
     data_in_list=[]
 
     #  /home/neil/Neil_Work/MS_SJSU/295A/ui_component_repo/awesome-android-ui
-    with open('../data/data-'+fileWithIntent[i]+'.csv', 'rb') as dataFile:
+    with open('../data/data-'+fileNames[i]+'.csv', 'rb') as dataFile:
         reader = csv.reader(dataFile)
         data_in_list = list(reader)
 
     data_in_list.pop(0) # remove header
-
-    intent = {}
-    keyIntent = fileWithIntent[i]
-    intent[keyIntent]={}  # code is intent name for the document
 
     fs = gridfs.GridFS(db) # to save images or large files
 
@@ -40,7 +39,7 @@ for i in range(len(fileWithIntent)):
         entity = entity.translate(None, '.')
         entity = entity.strip()
 
-        print entity
+        #print entity
 
         url = vals[2]
 
@@ -74,11 +73,11 @@ for i in range(len(fileWithIntent)):
                 with open(imagePath) as imageFile:
                     putId = fs.put(imageFile)
                     #putId = fs.put(imagePath) # saving image using gridfs, returns id of saved image
-                    intent[keyIntent][entity] = putId # saved image id as a value of entity
+                    intent['ui_element'][entity] = putId # saved image id as a value of entity
                     print "id of image ----------------------------------"
                     print entity
                     print putId
 
             imagePath='/home/neil/Neil_Work/MS_SJSU/295A/ui_component_repo/awesome-android-ui'
 
-    rec_id1 = collection.insert_one(intent)# Insert Data 
+rec_id1 = collection.insert_one(intent)# Insert Data 
