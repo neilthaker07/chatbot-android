@@ -21,8 +21,8 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 	var collectionName = "intent";
 
 	var mongoClient = require('mongodb').MongoClient;
-	var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159/?authSource=admin&authMechanism=SCRAM-SHA-1";
-	//var url = "mongodb://localhost:27017";
+	//var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159/?authSource=admin&authMechanism=SCRAM-SHA-1";
+	var url = "mongodb://localhost:27017";
 
 	mongoClient.connect(url, function(err1, db) {
 		
