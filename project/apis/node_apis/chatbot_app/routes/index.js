@@ -21,8 +21,9 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 	var collectionName = "intent";
 
 	var mongoClient = require('mongodb').MongoClient;
-	//var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159/?authSource=admin&authMechanism=SCRAM-SHA-1";
-	var url = "mongodb://localhost:27017";
+	var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/?authSource=admin&authMechanism=SCRAM-SHA-1";
+	var url2="mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/"+dbName+"?authSource=admin";
+	//var url = "mongodb://localhost:27017";
 
 	mongoClient.connect(url, function(err1, db) {
 		
@@ -52,7 +53,7 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 						try
 						{
 							// gridfs code to save image is below.
-							mongoose.connect(url+'/'+dbName);
+							mongoose.connect(url2);
 							var conn = mongoose.connection;
 							Grid.mongo = mongoose.mongo;
 
