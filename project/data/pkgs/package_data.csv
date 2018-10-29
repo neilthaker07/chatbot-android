@@ -1,0 +1,263 @@
+api_name,api_desc,api_package_link
+android,"Contains resource classes used by applications included in the platform and defines application
+permissions for system features.",https://developer.android.com/reference/android/package-summary.html
+android.accessibilityservice,"The classes in this package are used for development of accessibility service that
+  provide alternative or augmented feedback to the user.",https://developer.android.com/reference/android/accessibilityservice/package-summary.html
+android.accounts,,https://developer.android.com/reference/android/accounts/package-summary.html
+android.animation,"These classes provide functionality for the property animation system, which allows you 
+to animate object properties of any type. int, float, and hexadecimal
+color values are supported by default. You can animate any other type by telling the system how
+to calculate the values for that given type with a custom TypeEvaluator. For more information, see the
+Animation guide.",https://developer.android.com/reference/android/animation/package-summary.html https://developer.android.com/reference/android/animation/TypeEvaluator.html https://developer.android.com/guide/topics/graphics/prop-animation.html
+android.annotation,,https://developer.android.com/reference/android/annotation/package-summary.html
+android.app,Contains high-level classes encapsulating the overall Android application model.,https://developer.android.com/reference/android/app/package-summary.html
+android.app.admin,"Provides device administration features at the system level, allowing you to create
+security-aware applications that are useful in enterprise settings, in which IT professionals
+require rich control over employee devices. For more information, see the
+Device Administration 
+guide.",https://developer.android.com/reference/android/app/admin/package-summary.html https://developer.android.com/guide/topics/admin/device-admin.html
+android.app.assist,,https://developer.android.com/reference/android/app/assist/package-summary.html
+android.app.backup,"Contains the backup and restore functionality available to
+applications. If a user wipes the data on their device or upgrades to a new Android-powered
+device, all applications that have enabled backup can restore the user's previous data when the
+application is reinstalled. For more information, see the Data Backup guide.",https://developer.android.com/reference/android/app/backup/package-summary.html https://developer.android.com/guide/topics/data/backup.html
+android.app.job,,https://developer.android.com/reference/android/app/job/package-summary.html
+android.app.slice,,https://developer.android.com/reference/android/app/slice/package-summary.html
+android.app.usage,,https://developer.android.com/reference/android/app/usage/package-summary.html
+android.appwidget,"Contains the components necessary to create ""app widgets"", which users can embed in other
+applications (such as the home screen) to quickly access application data and services without
+launching a new activity. For more information, see the
+App Widgets guide.",https://developer.android.com/reference/android/appwidget/package-summary.html https://developer.android.com/guide/topics/appwidgets/index.html
+android.bluetooth,"Provides classes that manage Bluetooth functionality, such as scanning for
+devices, connecting with devices, and managing data transfer between devices.
+The Bluetooth API supports both ""Classic Bluetooth"" and Bluetooth Low Energy. For more information about Classic Bluetooth, see the
+Bluetooth guide.
+For more information about Bluetooth Low Energy, see the
+Bluetooth Low Energy (BLE) guide.",https://developer.android.com/reference/android/bluetooth/package-summary.html https://developer.android.com/guide/topics/connectivity/bluetooth.html https://developer.android.com/guide/topics/connectivity/bluetooth-le.html
+android.bluetooth.le,,https://developer.android.com/reference/android/bluetooth/le/package-summary.html
+android.companion,,https://developer.android.com/reference/android/companion/package-summary.html
+android.content,Contains classes for accessing and publishing data on a device.,https://developer.android.com/reference/android/content/package-summary.html
+android.content.pm,"Contains classes for accessing information about an
+application package, including information about its activities,
+permissions, services, signatures, and providers.",https://developer.android.com/reference/android/content/pm/package-summary.html
+android.content.res,"Contains classes for accessing application resources,
+such as raw asset files, colors, drawables, media, or other files
+in the package, plus important device configuration details
+(orientation, input types, etc.) that affect how the application may behave. For more information, see the Application Resources guide.",https://developer.android.com/reference/android/content/res/package-summary.html https://developer.android.com/guide/topics/resources/index.html
+android.database,,https://developer.android.com/reference/android/database/package-summary.html
+android.database.sqlite,,https://developer.android.com/reference/android/database/sqlite/package-summary.html
+android.drm,"Provides classes for managing DRM content and determining the capabilities of DRM plugins
+(agents).",https://developer.android.com/reference/android/drm/package-summary.html
+android.gesture,,https://developer.android.com/reference/android/gesture/package-summary.html
+android.graphics,,https://developer.android.com/reference/android/graphics/package-summary.html
+android.graphics.drawable,"Provides classes to manage a variety of visual elements that are intended for
+display only, such as bitmaps and gradients.",https://developer.android.com/reference/android/graphics/drawable/package-summary.html
+android.graphics.drawable.shapes,,https://developer.android.com/reference/android/graphics/drawable/shapes/package-summary.html
+android.graphics.fonts,,https://developer.android.com/reference/android/graphics/fonts/package-summary.html
+android.graphics.pdf,,https://developer.android.com/reference/android/graphics/pdf/package-summary.html
+android.hardware,"Provides support for hardware features, such as the camera and other sensors.",https://developer.android.com/reference/android/hardware/package-summary.html
+android.hardware.biometrics,,https://developer.android.com/reference/android/hardware/biometrics/package-summary.html
+android.hardware.camera2,"The android.hardware.camera2 package provides an interface to
+individual camera devices connected to an Android device.",https://developer.android.com/reference/android/hardware/camera2/package-summary.html
+android.hardware.camera2.params,,https://developer.android.com/reference/android/hardware/camera2/params/package-summary.html
+android.hardware.display,,https://developer.android.com/reference/android/hardware/display/package-summary.html
+android.hardware.fingerprint,,https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html
+android.hardware.input,,https://developer.android.com/reference/android/hardware/input/package-summary.html
+android.hardware.usb,"Provides support to communicate with USB hardware peripherals that are connected to 
+Android-powered devices. For more information, see the
+USB guide.",https://developer.android.com/reference/android/hardware/usb/package-summary.html https://developer.android.com/guide/topics/connectivity/usb/index.html
+android.icu.lang,,https://developer.android.com/reference/android/icu/lang/package-summary.html
+android.icu.math,,https://developer.android.com/reference/android/icu/math/package-summary.html
+android.icu.text,,https://developer.android.com/reference/android/icu/text/package-summary.html
+android.icu.util,,https://developer.android.com/reference/android/icu/util/package-summary.html
+android.inputmethodservice,,https://developer.android.com/reference/android/inputmethodservice/package-summary.html
+android.location,"Contains the framework API classes that define Android location-based and
+related services.",https://developer.android.com/reference/android/location/package-summary.html
+android.media,,https://developer.android.com/reference/android/media/package-summary.html
+android.media.audiofx,,https://developer.android.com/reference/android/media/audiofx/package-summary.html
+android.media.browse,,https://developer.android.com/reference/android/media/browse/package-summary.html
+android.media.effect,"Provides classes that allow you to apply a variety of visual effects to images and
+videos.",https://developer.android.com/reference/android/media/effect/package-summary.html
+android.media.midi,"Provides classes for sending and receiving messages using the standard MIDI
+event protocol over USB, Bluetooth LE, and virtual (inter-app) transports.",https://developer.android.com/reference/android/media/midi/package-summary.html
+android.media.projection,,https://developer.android.com/reference/android/media/projection/package-summary.html
+android.media.session,,https://developer.android.com/reference/android/media/session/package-summary.html
+android.media.tv,,https://developer.android.com/reference/android/media/tv/package-summary.html
+android.mtp,"Provides APIs that let you interact directly with connected cameras and other devices, using the
+PTP (Picture Transfer Protocol) subset of the MTP (Media Transfer Protocol) specification.",https://developer.android.com/reference/android/mtp/package-summary.html
+android.net,,https://developer.android.com/reference/android/net/package-summary.html
+android.net.http,,https://developer.android.com/reference/android/net/http/package-summary.html
+android.net.nsd,,https://developer.android.com/reference/android/net/nsd/package-summary.html
+android.net.rtp,"Provides APIs for RTP (Real-time Transport Protocol), allowing applications to manage on-demand
+or interactive data streaming.",https://developer.android.com/reference/android/net/rtp/package-summary.html
+android.net.sip,"Provides access to Session Initiation Protocol (SIP) functionality, such as
+making and answering VOIP calls using SIP. For more information, see the
+Session Initiation Protocol
+developer guide.",https://developer.android.com/reference/android/net/sip/package-summary.html https://developer.android.com/guide/topics/connectivity/sip.html
+android.net.wifi,Provides classes to manage Wi-Fi functionality on the device.,https://developer.android.com/reference/android/net/wifi/package-summary.html
+android.net.wifi.aware,"Provides classes which allow applications to use Wi-Fi Aware to discover peers and create
+    connections to them.",https://developer.android.com/reference/android/net/wifi/aware/package-summary.html
+android.net.wifi.hotspot2,,https://developer.android.com/reference/android/net/wifi/hotspot2/package-summary.html
+android.net.wifi.hotspot2.omadm,,https://developer.android.com/reference/android/net/wifi/hotspot2/omadm/package-summary.html
+android.net.wifi.hotspot2.pps,,https://developer.android.com/reference/android/net/wifi/hotspot2/pps/package-summary.html
+android.net.wifi.p2p,Provides classes to create peer-to-peer (P2P) connections with Wi-Fi Direct.,https://developer.android.com/reference/android/net/wifi/p2p/package-summary.html
+android.net.wifi.p2p.nsd,,https://developer.android.com/reference/android/net/wifi/p2p/nsd/package-summary.html
+android.net.wifi.rtt,"Provides classes which allow applications to use Wi-Fi RTT (IEEE 802.11mc) to measure distance
+    to supporting Access Points and peer devices.",https://developer.android.com/reference/android/net/wifi/rtt/package-summary.html
+android.nfc,"Provides access to Near Field Communication (NFC) functionality, allowing applications to read
+NDEF message in NFC tags. A ""tag"" may actually be another device that appears as a tag. For more information, see the
+Near Field Communication guide.",https://developer.android.com/reference/android/nfc/package-summary.html https://developer.android.com/guide/topics/connectivity/nfc/index.html
+android.nfc.cardemulation,,https://developer.android.com/reference/android/nfc/cardemulation/package-summary.html
+android.nfc.tech,"These classes provide access to a tag technology's features, which vary by the type
+of tag that is scanned.",https://developer.android.com/reference/android/nfc/tech/package-summary.html
+android.opengl,Provides an OpenGL ES static interface and utilities.,https://developer.android.com/reference/android/opengl/package-summary.html
+android.os,,https://developer.android.com/reference/android/os/package-summary.html
+android.os.health,,https://developer.android.com/reference/android/os/health/package-summary.html
+android.os.storage,"Contains classes for the system storage service, which manages binary asset filesystems
+known as Opaque Binary Blobs (OBBs).",https://developer.android.com/reference/android/os/storage/package-summary.html
+android.os.strictmode,,https://developer.android.com/reference/android/os/strictmode/package-summary.html
+android.preference,,https://developer.android.com/reference/android/preference/package-summary.html
+android.print,"Provides classes for implementing print support in applications and also contains all
+base classes and abstractions involved in printing.",https://developer.android.com/reference/android/print/package-summary.html
+android.print.pdf,,https://developer.android.com/reference/android/print/pdf/package-summary.html
+android.printservice,Provides classes for implementing print services.,https://developer.android.com/reference/android/printservice/package-summary.html
+android.provider,"Provides convenience classes to access the content providers supplied by
+Android.",https://developer.android.com/reference/android/provider/package-summary.html
+android.renderscript,"RenderScript provides support for high-performance computation across heterogeneous processors. For more information, see the
+RenderScript developer guide.",https://developer.android.com/reference/android/renderscript/package-summary.html https://developer.android.com/guide/topics/renderscript/index.html
+android.sax,,https://developer.android.com/reference/android/sax/package-summary.html
+android.se.omapi,,https://developer.android.com/reference/android/se/omapi/package-summary.html
+android.security,"Provides access to a few facilities of the Android security
+    subsystems.",https://developer.android.com/reference/android/security/package-summary.html
+android.security.keystore,,https://developer.android.com/reference/android/security/keystore/package-summary.html
+android.service.autofill,,https://developer.android.com/reference/android/service/autofill/package-summary.html
+android.service.carrier,,https://developer.android.com/reference/android/service/carrier/package-summary.html
+android.service.chooser,,https://developer.android.com/reference/android/service/chooser/package-summary.html
+android.service.dreams,,https://developer.android.com/reference/android/service/dreams/package-summary.html
+android.service.media,,https://developer.android.com/reference/android/service/media/package-summary.html
+android.service.notification,,https://developer.android.com/reference/android/service/notification/package-summary.html
+android.service.quicksettings,,https://developer.android.com/reference/android/service/quicksettings/package-summary.html
+android.service.restrictions,,https://developer.android.com/reference/android/service/restrictions/package-summary.html
+android.service.textservice,"Provides classes that allow you to create spell checkers in a manner similar to the
+input method framework (for IMEs).",https://developer.android.com/reference/android/service/textservice/package-summary.html
+android.service.voice,,https://developer.android.com/reference/android/service/voice/package-summary.html
+android.service.vr,,https://developer.android.com/reference/android/service/vr/package-summary.html
+android.service.wallpaper,,https://developer.android.com/reference/android/service/wallpaper/package-summary.html
+android.speech,,https://developer.android.com/reference/android/speech/package-summary.html
+android.speech.tts,,https://developer.android.com/reference/android/speech/tts/package-summary.html
+android.system,,https://developer.android.com/reference/android/system/package-summary.html
+android.telecom,,https://developer.android.com/reference/android/telecom/package-summary.html
+android.telephony,,https://developer.android.com/reference/android/telephony/package-summary.html
+android.telephony.cdma,,https://developer.android.com/reference/android/telephony/cdma/package-summary.html
+android.telephony.data,,https://developer.android.com/reference/android/telephony/data/package-summary.html
+android.telephony.euicc,,https://developer.android.com/reference/android/telephony/euicc/package-summary.html
+android.telephony.gsm,,https://developer.android.com/reference/android/telephony/gsm/package-summary.html
+android.telephony.mbms,,https://developer.android.com/reference/android/telephony/mbms/package-summary.html
+android.test,"A framework for writing Android test cases and suites. For more information, see the
+Testing developer guide.",https://developer.android.com/reference/android/test/package-summary.html https://developer.android.com/tools/testing/index.html
+android.test.mock,"Utility classes providing stubs or mocks of various Android framework building blocks. For more information, see the
+Testing guide.",https://developer.android.com/reference/android/test/mock/package-summary.html https://developer.android.com/tools/testing/index.html
+android.test.suitebuilder,,https://developer.android.com/reference/android/test/suitebuilder/package-summary.html
+android.test.suitebuilder.annotation,,https://developer.android.com/reference/android/test/suitebuilder/annotation/package-summary.html
+android.text,Provides classes used to render or track text and text spans on the screen.,https://developer.android.com/reference/android/text/package-summary.html
+android.text.format,,https://developer.android.com/reference/android/text/format/package-summary.html https://developer.android.com/reference/java/util/package-summary.html https://developer.android.com/reference/java/text/package-summary.html
+android.text.method,Provides classes that monitor or modify keypad input.,https://developer.android.com/reference/android/text/method/package-summary.html
+android.text.style,Provides classes used to view or change the style of a span of text in a View object.,https://developer.android.com/reference/android/text/style/package-summary.html
+android.text.util,,https://developer.android.com/reference/android/text/util/package-summary.html
+android.transition,"The classes in this package enable ""scenes & transitions"" functionality for
+view hiearchies.",https://developer.android.com/reference/android/transition/package-summary.html
+android.util,,https://developer.android.com/reference/android/util/package-summary.html
+android.view,,https://developer.android.com/reference/android/view/package-summary.html
+android.view.accessibility,"The classes in this package are used to represent screen content and changes to it
+  as well as APIs for querying the global accessibility state of the system.",https://developer.android.com/reference/android/view/accessibility/package-summary.html
+android.view.animation,Provides classes that handle tweened animations.,https://developer.android.com/reference/android/view/animation/package-summary.html
+android.view.autofill,,https://developer.android.com/reference/android/view/autofill/package-summary.html
+android.view.inputmethod,,https://developer.android.com/reference/android/view/inputmethod/package-summary.html
+android.view.textclassifier,,https://developer.android.com/reference/android/view/textclassifier/package-summary.html
+android.view.textservice,,https://developer.android.com/reference/android/view/textservice/package-summary.html
+android.webkit,Provides tools for browsing the web.,https://developer.android.com/reference/android/webkit/package-summary.html
+android.widget,"The widget package contains (mostly visual) UI elements to use
+on your Application screen.",https://developer.android.com/reference/android/widget/package-summary.html
+dalvik.annotation,,https://developer.android.com/reference/dalvik/annotation/package-summary.html
+dalvik.bytecode,,https://developer.android.com/reference/dalvik/bytecode/package-summary.html
+dalvik.system,,https://developer.android.com/reference/dalvik/system/package-summary.html
+java.awt.font,,https://developer.android.com/reference/java/awt/font/package-summary.html
+java.beans,,https://developer.android.com/reference/java/beans/package-summary.html
+java.io,,https://developer.android.com/reference/java/io/package-summary.html
+java.lang,,https://developer.android.com/reference/java/lang/package-summary.html
+java.lang.annotation,,https://developer.android.com/reference/java/lang/annotation/package-summary.html
+java.lang.invoke,,https://developer.android.com/reference/java/lang/invoke/package-summary.html
+java.lang.ref,,https://developer.android.com/reference/java/lang/ref/package-summary.html
+java.lang.reflect,,https://developer.android.com/reference/java/lang/reflect/package-summary.html
+java.math,,https://developer.android.com/reference/java/math/package-summary.html
+java.net,,https://developer.android.com/reference/java/net/package-summary.html
+java.nio,,https://developer.android.com/reference/java/nio/package-summary.html
+java.nio.channels,,https://developer.android.com/reference/java/nio/channels/package-summary.html
+java.nio.channels.spi,,https://developer.android.com/reference/java/nio/channels/spi/package-summary.html https://developer.android.com/reference/java/nio/channels/package-summary.html
+java.nio.charset,,https://developer.android.com/reference/java/nio/charset/package-summary.html
+java.nio.charset.spi,,https://developer.android.com/reference/java/nio/charset/spi/package-summary.html https://developer.android.com/reference/java/nio/charset/package-summary.html
+java.nio.file,,https://developer.android.com/reference/java/nio/file/package-summary.html
+java.nio.file.attribute,,https://developer.android.com/reference/java/nio/file/attribute/package-summary.html
+java.nio.file.spi,,https://developer.android.com/reference/java/nio/file/spi/package-summary.html
+java.security,,https://developer.android.com/reference/java/security/package-summary.html
+java.security.acl,,https://developer.android.com/reference/java/security/acl/package-summary.html
+java.security.cert,,https://developer.android.com/reference/java/security/cert/package-summary.html
+java.security.interfaces,,https://developer.android.com/reference/java/security/interfaces/package-summary.html
+java.security.spec,,https://developer.android.com/reference/java/security/spec/package-summary.html
+java.sql,,https://developer.android.com/reference/java/sql/package-summary.html
+java.text,,https://developer.android.com/reference/java/text/package-summary.html
+java.time,"The main API for dates, times, instants, and durations.",https://developer.android.com/reference/java/time/package-summary.html
+java.time.chrono,Generic API for calendar systems other than the default ISO.,https://developer.android.com/reference/java/time/chrono/package-summary.html
+java.time.format,Provides classes to print and parse dates and times.,https://developer.android.com/reference/java/time/format/package-summary.html
+java.time.temporal,"Access to date and time using fields and units, and date time adjusters.",https://developer.android.com/reference/java/time/temporal/package-summary.html
+java.time.zone,Support for time-zones and their rules.,https://developer.android.com/reference/java/time/zone/package-summary.html
+java.util,,https://developer.android.com/reference/java/util/package-summary.html
+java.util.concurrent,,https://developer.android.com/reference/java/util/concurrent/package-summary.html
+java.util.concurrent.atomic,,https://developer.android.com/reference/java/util/concurrent/atomic/package-summary.html
+java.util.concurrent.locks,,https://developer.android.com/reference/java/util/concurrent/locks/package-summary.html
+java.util.function,,https://developer.android.com/reference/java/util/function/package-summary.html
+java.util.jar,,https://developer.android.com/reference/java/util/jar/package-summary.html
+java.util.logging,"Provides the classes and interfaces of 
+the JavaTM 2
+ platform's core logging facilities.",https://developer.android.com/reference/java/util/logging/package-summary.html
+java.util.prefs,,https://developer.android.com/reference/java/util/prefs/package-summary.html
+java.util.regex,,https://developer.android.com/reference/java/util/regex/package-summary.html
+java.util.stream,,https://developer.android.com/reference/java/util/stream/package-summary.html
+java.util.zip,,https://developer.android.com/reference/java/util/zip/package-summary.html
+javax.crypto,,https://developer.android.com/reference/javax/crypto/package-summary.html
+javax.crypto.interfaces,,https://developer.android.com/reference/javax/crypto/interfaces/package-summary.html
+javax.crypto.spec,,https://developer.android.com/reference/javax/crypto/spec/package-summary.html
+javax.microedition.khronos.egl,,https://developer.android.com/reference/javax/microedition/khronos/egl/package-summary.html
+javax.microedition.khronos.opengles,Provides a standard OpenGL interface.,https://developer.android.com/reference/javax/microedition/khronos/opengles/package-summary.html
+javax.net,,https://developer.android.com/reference/javax/net/package-summary.html
+javax.net.ssl,,https://developer.android.com/reference/javax/net/ssl/package-summary.html
+javax.security.auth,,https://developer.android.com/reference/javax/security/auth/package-summary.html
+javax.security.auth.callback,,https://developer.android.com/reference/javax/security/auth/callback/package-summary.html
+javax.security.auth.login,,https://developer.android.com/reference/javax/security/auth/login/package-summary.html
+javax.security.auth.x500,,https://developer.android.com/reference/javax/security/auth/x500/package-summary.html
+javax.security.cert,,https://developer.android.com/reference/javax/security/cert/package-summary.html
+javax.sql,,https://developer.android.com/reference/javax/sql/package-summary.html
+javax.xml,,https://developer.android.com/reference/javax/xml/package-summary.html
+javax.xml.datatype,,https://developer.android.com/reference/javax/xml/datatype/package-summary.html
+javax.xml.namespace,,https://developer.android.com/reference/javax/xml/namespace/package-summary.html
+javax.xml.parsers,,https://developer.android.com/reference/javax/xml/parsers/package-summary.html
+javax.xml.transform,,https://developer.android.com/reference/javax/xml/transform/package-summary.html
+javax.xml.transform.dom,,https://developer.android.com/reference/javax/xml/transform/dom/package-summary.html
+javax.xml.transform.sax,,https://developer.android.com/reference/javax/xml/transform/sax/package-summary.html
+javax.xml.transform.stream,,https://developer.android.com/reference/javax/xml/transform/stream/package-summary.html
+javax.xml.validation,,https://developer.android.com/reference/javax/xml/validation/package-summary.html
+javax.xml.xpath,,https://developer.android.com/reference/javax/xml/xpath/package-summary.html
+junit.framework,,https://developer.android.com/reference/junit/framework/package-summary.html
+junit.runner,,https://developer.android.com/reference/junit/runner/package-summary.html
+org.apache.http.conn,,https://developer.android.com/reference/org/apache/http/conn/package-summary.html
+org.apache.http.conn.scheme,,https://developer.android.com/reference/org/apache/http/conn/scheme/package-summary.html
+org.apache.http.conn.ssl,,https://developer.android.com/reference/org/apache/http/conn/ssl/package-summary.html
+org.apache.http.params,,https://developer.android.com/reference/org/apache/http/params/package-summary.html
+org.json,,https://developer.android.com/reference/org/json/package-summary.html
+org.w3c.dom,,https://developer.android.com/reference/org/w3c/dom/package-summary.html
+org.w3c.dom.ls,,https://developer.android.com/reference/org/w3c/dom/ls/package-summary.html
+org.xml.sax,,https://developer.android.com/reference/org/xml/sax/package-summary.html
+org.xml.sax.ext,,https://developer.android.com/reference/org/xml/sax/ext/package-summary.html
+org.xml.sax.helpers,,https://developer.android.com/reference/org/xml/sax/helpers/package-summary.html
+org.xmlpull.v1,,https://developer.android.com/reference/org/xmlpull/v1/package-summary.html
+org.xmlpull.v1.sax2,,https://developer.android.com/reference/org/xmlpull/v1/sax2/package-summary.html
