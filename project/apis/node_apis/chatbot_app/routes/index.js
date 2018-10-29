@@ -22,6 +22,7 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 
 	var mongoClient = require('mongodb').MongoClient;
 	var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/?authSource=admin&authMechanism=SCRAM-SHA-1";
+	var url2="mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/"+dbName+"?authSource=admin";
 	//var url = "mongodb://localhost:27017";
 
 	mongoClient.connect(url, function(err1, db) {
@@ -47,6 +48,46 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 					if(intentInput==='ui_element' && answer!==null && answer !=='')
 					{
 						hasImage = true;
+
+						try
+						{
+							// gridfs code to save image is below.
+							mongoose.connect(url2);
+							var conn = mongoose.connection;
+							Grid.mongo = mongoose.mongo;
+
+							conn.once('open', function(){
+
+								var gfs = Grid(conn.db);
+								var writestream = fs.createWriteStream(path.join(__dirname, '/'+answer));
+								try {
+
+									var readstream = gfs.createReadStream({
+										_id: answer
+									});
+
+									console.log("readstream:::::"+readstream);
+
+									readstream.pipe(writestream, function(){
+										res.sendFile(path.join(__dirname, '/'+answer));	
+									});
+									writestream.on('close', function(){
+										console.log(" written new file image - ");
+									});
+								} 
+								catch (err3) {
+									console.log("image not found....");
+								    console.log(err3);
+								    res.send(500, {error:"image not found...."});
+								}
+							});
+						}
+						catch (err4)
+						{
+							console.log("mongodb connection error for image fetch....");
+							console.log(err4);
+							res.send(500, {error:"mongodb connection error for image fetch...."});
+						}
 					}
 					res.json({
 						answer: answer,
@@ -71,80 +112,6 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 		}
 
 	});
-});
-
-
-router.get('/image/:id', function(req, res, next) {
-	
-	console.log(" Getting answer from DB ");
-	var imageId = req.params.id;
-	
-	console.log("Image Id : "+imageId);
-
-	var dbName = "Assistant_Chatbot_Android_Developer";
-	var collectionName = "intent";
-
-	var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/"+dbName+"?authSource=admin";
-	//var url = "mongodb://localhost:27017";
-
-	function doHomework(subject, callback) {
-
-		try
-		{
-			mongoose.connect(url);
-			mongoose.set('debug', true);
-			var conn = mongoose.connection;
-			Grid.mongo = mongoose.mongo;
-
-			conn.once('open', function(){
-
-				var gfs = Grid(conn.db);
-
-				console.log("after writing hhhhh---");
-
-				var writestream = fs.createWriteStream(path.join(__dirname, '/'+imageId));
-				try {
-
-					var readstream = gfs.createReadStream({
-						_id: imageId
-					});
-
-					console.log("readstream:::::"+readstream);
-
-					readstream.pipe(writestream, function(){
-						res.sendFile(path.join(__dirname, '/'+imageId));	
-					});
-					writestream.on('close', function(){
-						console.log(" written new file image - ");
-					});
-
-					console.log("after writing jjjj---");
-
-				} 
-				catch (err3) {
-					console.log("image not found....");
-				    console.log(err3);
-				    res.send(500, {error:"image not found...."});
-				}
-			});
-		}
-		catch (err4)
-		{
-			console.log("mongodb connection error for image fetch....");
-			console.log(err4);
-			res.send(500, {error:"mongodb connection error for image fetch...."});
-		}
-
-		callback();
-	}
-
-	doHomework('math', function() {
-		console.log("inside callback");
-		res.json({
-			"image":"image"
-		});
-	});
-
 });
 
 module.exports = router;
