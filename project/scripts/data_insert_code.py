@@ -6,7 +6,8 @@
 from pymongo import MongoClient 
   
 try: 
-    conn = MongoClient() 
+    url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/?authSource=admin&authMechanism=SCRAM-SHA-1"
+    conn = MongoClient(url) 
     print("Connected successfully!!!") 
 except:   
     print("Could not connect to MongoDB") 
