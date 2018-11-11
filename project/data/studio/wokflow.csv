@@ -1,0 +1,28 @@
+Workflow,Description,url
+workflow,"The workflow to develop an app for Android is conceptually the same as
+other app platforms. However, to efficiently build a
+well-designed app for Android, you need some specialized tools. The following
+list provides an overview of the process to build an Android app and
+includes links to some Android Studio tools you should use during
+each phase of development. This is the phase you probably already finished:
+    Install Android Studio and
+    create a project. For a walkthrough with Android Studio that teaches some Android
+    development fundamentals, also check out the guide to
+    Building your first app. Now you can get to work. Android Studio includes a variety of
+    tools and intelligence to help you
+    work faster, write quality code, design a UI, and create resources for
+    different device types.
+    For more information about the tools and features available,
+    see Write your app. During this phase, you build your project into a debuggable APK package
+    that you can install and run on the emulator or an Android-powered device.
+    For more information about how to run your code, see
+    Build and run your app. You can also begin customizing your build. For example, you can create build variants that
+    produce different types of APKs from the same project, and shrink your code and resources to
+    make your APK file smaller. For an introduction to customizing your build,
+    see Configure your build. This is the iterative phase in which you continue writing your app but
+    with a focus on eliminating bugs and optimizing app performance. Of course,
+    creating tests will help you in those endeavors. For information about basic debugging tasks, read Debug your app and Write and view logs. To view and analyze various performance metrics such as memory usage,
+    network traffic, CPU impact, and more, see Performance profiling tools. And for an introduction to building tests, see Test your app. When you're ready to release your app to users, there are just a few
+    more things to consider, such as versioning your app and signing it with a
+    key. For more information, see the
+    Publish your app. Content and code samples on this page are subject to the licenses described in the Content License. Java is a registered trademark of Oracle and/or its affiliates. Last updated June 5, 2018.",https://developer.android.com/studio/workflow

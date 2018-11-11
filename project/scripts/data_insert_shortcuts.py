@@ -10,15 +10,14 @@ except:
 db = conn.Assistant_Chatbot_Android_Developer 
   
 # Created or Switched to collection names: intent
-collection = db.intent
+collection = db.keyboard_shortcuts
 
 # read csv file to get data
 data_in_list=[]
 fileLocation='../data/pkgs/keyboard_shortcuts.csv'
-intentName = "keyboard_shortcuts"#api_packages
 
 import csv
-with open(fileLocation, 'rb') as f:
+with open(fileLocation, 'r') as f:
     reader = csv.reader(f)
     data_in_list = list(reader)
 
@@ -26,8 +25,6 @@ data_in_list.pop(0) # remove heading
 data_in_list.pop(1)
 
 intent = {}
-intent[intentName]={}  # code is intent name for the document
-
 for each_row in data_in_list:
     que = each_row[0]
     if len(que)!=0:
@@ -42,7 +39,7 @@ for each_row in data_in_list:
         ans['mac'] = mac_ans
         
         #print(ans)
-        intent[intentName][que]=ans
+        intent[que]=ans
 
 # Insert Data 
 rec_id1 = collection.insert_one(intent) 

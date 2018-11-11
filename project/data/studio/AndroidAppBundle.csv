@@ -1,0 +1,5 @@
+AndroidAppBundle,Description,url
+Android App Bundle,"Make installs smaller and faster for your users. Upload your app
+  using Android's new app publishing format and Google Play's Dynamic
+  Delivery to generate and serve APKs that are optimized for each
+  user's device.",https://developer.android.com/platform/technology/app-bundle/

@@ -1,0 +1,6 @@
+Configure,Descrition,url
+Configure,"Android Studio provides wizards and templates that verify your system
+requirements, such as the Java Development Kit (JDK) and available RAM, and configure default
+settings, such as an optimized default Android Virtual Device (AVD) emulation and updated system
+images. This document describes additional configuration settings you may want to use to
+customize your use of Android Studio.",https://developer.android.com/studio/intro/studio-config

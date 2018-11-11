@@ -1,0 +1,2 @@
+APKAnalyzer,Description,url
+APK Analyzer,"Find opportunities to reduce your Android app size by inspecting the contents of your app APK file, even if it wasn't built with Android Studio. Inspect the manifest file, resources, and DEX files. Compare two APKs to see how your app size changed between app versions.",https://developer.android.com/studio/build/apk-analyzer

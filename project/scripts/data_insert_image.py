@@ -1,3 +1,4 @@
+#  kill $(ps aux | grep mongodb-compass | awk '{print $2}')
 from pymongo import MongoClient
 import re, gridfs, csv
   
@@ -12,13 +13,12 @@ except:
 db = conn.Assistant_Chatbot_Android_Developer 
   
 # Created or Switched to collection names: intent
-collection = db.intent
+collection = db.ui_element
 
 imagePath = '/home/neil/Neil_Work/MS_SJSU/295A/ui_component_repo/awesome-android-ui'
 fileNames=['ui_actionbar','ui_animation','ui_button','ui_calendar','ui_dialog','ui_effect','ui_graph','ui_image','ui_label','ui_layout','ui_list','ui_material','ui_menu','ui_other','ui_parallax','ui_progress','ui_seekbar','ui_viewpager']
 
 intent = {}
-intent['ui_element']={}  # code is intent name for the document
 
 j=0
 for i in range(len(fileNames)):
@@ -26,7 +26,7 @@ for i in range(len(fileNames)):
     data_in_list=[]
 
     #  /home/neil/Neil_Work/MS_SJSU/295A/ui_component_repo/awesome-android-ui
-    with open('../data/data-'+fileNames[i]+'.csv', 'rb') as dataFile:
+    with open('../data/data-'+fileNames[i]+'.csv', 'r') as dataFile:
         reader = csv.reader(dataFile)
         data_in_list = list(reader)
 
@@ -37,10 +37,11 @@ for i in range(len(fileNames)):
     for each_row in data_in_list:
         vals = (str(each_row)).strip().split('|')
         entity = vals[0].split(']')[0].split('[')[2]
-        entity = entity.translate(None, '.')
-        entity = entity.strip()
+        entity = entity.replace(".", " ")
+        #entity = entity.translate(None, '.')
+        #entity = entity.strip()
 
-        #print entity
+        #print(entity)
 
         url = vals[2]
 
@@ -69,15 +70,15 @@ for i in range(len(fileNames)):
                 
                 imagePath += op3.group(1)
 
-            print "image path name : "+imagePath
+            print("image path name : "+imagePath)
             if 'https' not in imagePath:
-                with open(imagePath) as imageFile:
+                with open(imagePath, 'rb') as imageFile:
                     putId = fs.put(imageFile)
                     #putId = fs.put(imagePath) # saving image using gridfs, returns id of saved image
-                    intent['ui_element'][entity] = putId # saved image id as a value of entity
-                    print "id of image ----------------------------------"
-                    print entity
-                    print putId
+                    intent[entity] = putId # saved image id as a value of entity
+                    print("id of image ----------------------------------")
+                    print(entity)
+                    print(putId)
 
             imagePath='/home/neil/Neil_Work/MS_SJSU/295A/ui_component_repo/awesome-android-ui'
 

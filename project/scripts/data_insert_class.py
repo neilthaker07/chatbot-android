@@ -10,22 +10,20 @@ except:
 db = conn.Assistant_Chatbot_Android_Developer 
   
 # Created or Switched to collection names: intent
-collection = db.intent
+collection = db.api_classes
 
 # read csv file to get data
 data_in_list=[]
 fileLocation='../data/pkgs/class_data.csv'
-intentName = "api_classes"#api_packages
 
 import csv
-with open(fileLocation, 'rb') as f:
+with open(fileLocation, 'r') as f:
     reader = csv.reader(f)
     data_in_list = list(reader)
 
 data_in_list.pop(0) # remove heading
 
 intent = {}
-intent[intentName]={}  # code is intent name for the document
 
 for each_row in data_in_list:
     print(each_row)
@@ -41,7 +39,7 @@ for each_row in data_in_list:
     print(que)
     print(ans)
 
-    intent[intentName][que]=ans
+    intent[que]=ans
 
 # Insert Data 
 rec_id1 = collection.insert_one(intent) 

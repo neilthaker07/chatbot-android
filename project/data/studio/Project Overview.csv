@@ -1,0 +1,8 @@
+Android Project,Description,url
+Projects overview,"A project in Android Studio contains everything that defines your
+workspace for an app, from source code and assets, to test code and build
+configurations. When you start a new project, Android Studio creates the necessary
+structure for all your files and makes them visible in the
+Project window on the left side of the IDE (click View
+> Tool Windows > Project). This page provides an overview of the
+key components inside your project.",https://developer.android.com/studio/projects/index

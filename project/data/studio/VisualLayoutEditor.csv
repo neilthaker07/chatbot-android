@@ -1,0 +1,2 @@
+VisualLayoutEditor,Description,url
+Visual layout editor,Create complex layouts with ConstraintLayout by adding constraints from each view to other views and guidelines. Then preview your layout on any screen size by selecting one of various device configurations or by simply resizing the preview window.,https://developer.android.com/studio/write/layout-editor
