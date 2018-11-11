@@ -13,17 +13,20 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 	console.log(" Getting answer from DB ");
 	var intentInput = req.params.intent;
 	var entityInput = req.params.entity;
+	var os = req.query.os;
 
 	console.log("Intent question : "+intentInput);
 	console.log("Entity question : "+entityInput);
+	console.log("os : "+os);
 
 	var dbName = "Assistant_Chatbot_Android_Developer";
-	var collectionName = "intent";
+	var collectionName = intentInput==='ui_element' ? 'intent' : intentInput;
 
 	var mongoClient = require('mongodb').MongoClient;
 	var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/?authSource=admin&authMechanism=SCRAM-SHA-1";
 	var url2="mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/"+dbName+"?authSource=admin";
 	//var url = "mongodb://localhost:27017";
+	//var url2=url;
 
 	mongoClient.connect(url, function(err1, db) {
 		
@@ -31,20 +34,27 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 		{
 			var dbo = db.db(dbName);
 			var collection = dbo.collection( collectionName );
+			var docFind = intentInput==='ui_element' ? intentInput : entityInput;
 
-			collection.find({[String(intentInput)] : {$exists: true}}).toArray(function(err2, result)
+			collection.find({[String(docFind)] : {$exists: true}}).toArray(function(err2, result)
 			{
 			  	try
 				{ 	
 					var hasImage = false;
-					var answer = result[0][intentInput][entityInput];
+					var answer = intentInput==='ui_element' ? result[0][intentInput][entityInput] : result[0][entityInput];
 					if(typeof answer === 'undefined') // In case entity not found.
 					{
 						answer = "";
 					}
+					console.log("Answer1 : "+JSON.stringify(answer));
+					// Keyboard shortcuts
+					if(typeof os !== 'undefined' && os!==null && os!=='')
+					{
+						answer = answer[os];
+					}
+					console.log("Answer : "+JSON.stringify(answer));
 
-					console.log("Answer : "+answer);
-
+					// UI elements, Image fetch
 					if(intentInput==='ui_element' && answer!==null && answer !=='')
 					{
 						hasImage = true;
