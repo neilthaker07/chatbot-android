@@ -195,7 +195,7 @@
           $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p><img id="demo" src=/images/glassactionbar.png></p></li>').appendTo($('.messages ul'));
           $(".messages").animate({ scrollTop: $(document).height() }, "fast");
         } else {
-          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' + data.answerText + '</p></li>').appendTo($('.messages ul'));
+          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' + data.fulfillmentText + '</p></li>').appendTo($('.messages ul'));
           $(".messages").animate({ scrollTop: $(document).height() }, "fast");
         }
     });
