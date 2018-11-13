@@ -14,6 +14,7 @@
   <link rel='stylesheet' href='/stylesheets/chat.css' />
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 </head>
 
 <body>
@@ -87,9 +88,67 @@
   });
 
   $(".attachment").on("click", function(e) {
-    
 
-});
+    var gumStream; //stream from getUserMedia()
+    var rec; //Recorder.js object
+    var input; //MediaStreamAudioSourceNode we'll be recording
+
+    // shim for AudioContext when it's not avb.
+    var AudioContext = window.AudioContext || window.webkitAudioContext;
+    var audioContext = new AudioContext(); //new audio context to help us record
+
+    navigator.mediaDevices.getUserMedia({ audio:true, video:false})
+      .then(stream => {
+
+        gumStream = stream;
+        input = audioContext.createMediaStreamSource(stream);
+
+        rec = new Recorder(input, {numChannels:1})
+
+        //start the recording process
+        rec.record()
+
+        console.log("Recording started");
+      }).catch(function(err) {
+        console.log("Error in recording audio...");
+        console.log(err);
+    });
+
+    setTimeout(() => {
+      rec.stop();
+      gumStream.getAudioTracks()[0].stop();
+      rec.exportWAV(uploadAudioFile);
+    }, 6000);
+
+  });
+
+  function uploadAudioFile(blob) {
+
+    var formData = new FormData();
+    formData.append('file', blob);
+
+      $.ajax({
+        url: 'http://localhost:8000/conversation/voice',
+        type: 'post',
+        contentType: false,
+        cache: false,
+        data: formData,
+        processData: false,
+        success: function(data){
+          $('<li class="sent"><img src="/images/avatar.png" alt="" /><p>' + data.queryText + '</p></li>').appendTo($('.messages ul'));
+          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' + data.fulfillmentText + '</p></li>').appendTo($('.messages ul'));
+
+          $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+            console.log( errorThrown );
+        }
+    });
+}
+
+  $('.submit').click(function() {
+    newMessage();
+  });
 
   $(".expand-button").click(function() {
     $("#profile").toggleClass("expanded");
@@ -132,7 +191,6 @@
   	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
     $.post("http://localhost:8000/conversation/ask", {userQuery: message}, function(data){
-        console.log(data);
         if(data.intentName == 'image'){
           $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p><img id="demo" src=/images/glassactionbar.png></p></li>').appendTo($('.messages ul'));
           $(".messages").animate({ scrollTop: $(document).height() }, "fast");
@@ -143,10 +201,6 @@
     });
 
   };
-
-  $('.submit').click(function() {
-    newMessage();
-  });
 
   $(window).on('keydown', function(e) {
     if (e.which == 13) {
