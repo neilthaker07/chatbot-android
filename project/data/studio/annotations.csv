@@ -1,0 +1,7 @@
+annotations,description,url
+Improve code inspection with annotations,"Using code inspections tools such as Lint can help you find
+problems and improve your code, but inspection tools can only infer so much. Android resource IDs,
+for example, use an int to identify strings, graphics, colors, and other resource types,
+so inspection tools cannot tell when you have specified a string resource where you should have
+specified a color. This situation means that your app may render incorrectly or fail to run at all,
+even if you use code inspection.",https://developer.android.com/studio/write/annotations

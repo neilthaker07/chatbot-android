@@ -1,0 +1,5 @@
+add_module,description,url
+Add_module,"Modules provide a container for your app's
+source code, resource files, and app level settings, such as the
+module-level build file and Android manifest file.
+Each module can be independently built, tested, and debugged.",https://developer.android.com/studio/projects/add-app-module

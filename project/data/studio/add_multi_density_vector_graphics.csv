@@ -1,0 +1,8 @@
+add_multi_density_vector_graphics,description,url
+Add multi-density vector graphics,"Android Studio includes a tool called Vector Asset Studio that helps you add
+material icons and import Scalable Vector Graphic (SVG) and Adobe Photoshop Document (PSD) files
+into your project as vector drawable resources. Using vector drawables instead of bitmaps reduces
+the size of your APK because the same file can be resized for different screen densities
+without loss of image quality. For older versions of Android that don't support
+vector drawables, Vector Asset Studio can, at build time, turn your vector drawables
+into different bitmap sizes for each screen density.",https://developer.android.com/studio/write/vector-asset-studio

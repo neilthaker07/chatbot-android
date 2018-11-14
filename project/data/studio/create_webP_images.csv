@@ -1,0 +1,8 @@
+create_webP_images,description,url
+Create WebP images,"WebP is an image file format from
+Google that provides lossy compression (like JPEG) as well as transparency (like
+PNG) but can provide better compression than either JPEG or PNG. Lossy WebP
+images are supported in Android 4.0 (API level 14) and higher, and lossless and
+transparent WebP images are supported in Android 4.3 (API level 18) and higher.
+This page shows how to convert images to WebP format and how to convert WebP
+images to PNG format.",https://developer.android.com/studio/write/convert-webp

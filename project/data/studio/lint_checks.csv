@@ -1,0 +1,5 @@
+lint_checks,description,url
+Improve your code with lint checks,"In addition to ensuring your app meets its functional requirements by building tests, it's
+important that you also ensure your code has no structural problems by running the code through
+lint. The lint tool helps find poorly structured code can impact the
+reliability and efficiency of your Android apps and make your code harder to maintain.",https://developer.android.com/studio/write/lint

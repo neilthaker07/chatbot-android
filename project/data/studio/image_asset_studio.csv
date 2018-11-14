@@ -1,0 +1,10 @@
+image_asset_studio,description,url
+Create app icons with Image Asset Studio,"Android Studio includes a tool called Image Asset Studio that helps you generate your own app
+ icons from
+ material icons,
+ custom images, and text strings. It generates a set of icons at the appropriate resolution
+ for each pixel
+ density that your app supports.
+ Image Asset Studio places the newly generated icons in density-specific folders under the
+ res/ directory in your project. At runtime, Android uses the appropriate
+ resource based on the screen density of the device your app is running on.",https://developer.android.com/studio/write/image-asset-studio
