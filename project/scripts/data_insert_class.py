@@ -3,6 +3,7 @@ from pymongo import MongoClient
 try: 
     url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/?authSource=admin&authMechanism=SCRAM-SHA-1"
     conn = MongoClient(url) 
+    #conn = MongoClient() 
     print("Connected successfully!!!") 
 except:   
     print("Could not connect to MongoDB") 
@@ -31,7 +32,11 @@ for each_row in data_in_list:
     
     que = each_row[0]
     que = que.replace("<E>", "")
-    que = que.replace(".", " ")
+    que = que.replace(".", "_")
+    que = que.lower()
+    que = que.replace(" ","_")
+    que = que.replace("-","_")
+    que = que.replace("/","_or_")
     
     ans = each_row[1]
     ans = ans.replace("\n", "")

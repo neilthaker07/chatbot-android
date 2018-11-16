@@ -39,7 +39,9 @@ for eachFileName in allFiles:
         que = each_row[0]
         que = que.lower()
         que = que.replace(" ","_")
-        ans = each_row[1] + " Click <a href="+each_row[2]+">here</a> for more information."
+        que = que.replace("-","_")
+        que = que.replace("/","_or_")
+        ans = each_row[1] + ' Click <a href='+each_row[2]+' target="_blank">here</a> for more information.'
         intent[que] = ans
 
 # Insert Data 
