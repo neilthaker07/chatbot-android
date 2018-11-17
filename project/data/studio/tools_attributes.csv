@@ -1,0 +1,6 @@
+tools_attributes,decription,url
+Tools attributes reference,"Android Studio supports a variety of XML attributes in the tools namespace
+that enable design-time features (such as which layout to show in a fragment) or
+compile-time behaviors (such as which shrinking mode to apply to your XML
+resources). When you build your app, the build tools remove these attributes so
+there is no effect on your APK size or runtime behavior.",https://developer.android.com/studio/write/tool-attributes

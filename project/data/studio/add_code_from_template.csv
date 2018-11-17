@@ -1,0 +1,5 @@
+add_code_from_template,description,url
+Add code from a template,"Android Studio provides code templates that follow the Android design and development best
+practices to get you on the right track to creating beautiful, functional apps. You can use
+templates to create new app modules, individual activities, or other specific Android project
+components.",https://developer.android.com/studio/projects/templates

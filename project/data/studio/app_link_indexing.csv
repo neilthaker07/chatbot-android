@@ -1,0 +1,5 @@
+app_link_indexing,description,url
+Add Android App Links,"Android App Links are HTTP URLs that bring users directly to specific
+  content in your Android app. Android App Links can drive more traffic to
+your app, help you discover which app content is used most, and make it easier for users to share
+  and find content in an installed app.",https://developer.android.com/studio/write/app-link-indexing

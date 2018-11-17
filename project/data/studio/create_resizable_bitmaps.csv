@@ -1,0 +1,5 @@
+create_resizable_bitmaps,description,url
+Create resizable bitmaps (9-Patch files),"The Draw 9-patch tool is a WYSIWYG editor included in Android Studio that allows you to create
+  bitmap images that automatically resize to accommodate the contents of the view and the size of
+  the screen. Selected parts of the image are scaled horizontally or vertically based on indicators
+  drawn within the image.",https://developer.android.com/studio/write/draw9patch

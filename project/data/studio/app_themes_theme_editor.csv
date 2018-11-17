@@ -1,0 +1,5 @@
+app_themes_theme_editor,description,url
+Design app themes with Theme Editor,"Create and modify
+themes for your app.
+   Adjust themes for different resource classifiers.
+   Visualize the effect of color changes on common UI elements.",https://developer.android.com/studio/write/theme-editor

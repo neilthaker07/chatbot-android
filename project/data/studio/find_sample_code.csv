@@ -1,0 +1,5 @@
+find_sample_code,description,url
+Find sample code,"Android Studio provides a selection of code samples and templates for you to use to accelerate your
+app development. Browse sample code to learn how to build different components for your applications.
+Use templates to create new app modules, individual activities, or other specific Android project
+components.",https://developer.android.com/studio/write/sample-code

@@ -33,7 +33,11 @@ for each_row in data_in_list:
         windows_ans = each_row[1]
         mac_ans = each_row[2]
 
-        que=que.replace('.',' ')
+        que=que.replace('.','_')
+        que = que.lower()
+        que = que.replace(" ","_")
+        que = que.replace("-","_")
+        que = que.replace("/","_or_")
 
         ans = {}
         ans['win'] = windows_ans
