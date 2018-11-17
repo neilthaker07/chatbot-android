@@ -191,13 +191,16 @@
   	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
     $.post("http://localhost:8000/conversation/ask", {userQuery: message}, function(data){
+
         if(data.intentName == 'image'){
-          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p><img id="demo" src=/images/glassactionbar.png></p></li>').appendTo($('.messages ul'));
-          $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' +
+              '<img id="demo" style="height:300px;width:300px;border-radius:0" src=/images/glassactionbar.png></p></li>').appendTo($('.messages ul'));
         } else {
-          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' + data.fulfillmentText + '</p></li>').appendTo($('.messages ul'));
-          $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' +
+              data.fulfillmentText + '</p></li>').appendTo($('.messages ul'));
         }
+
+        $(".messages").animate({ scrollTop: $(document).height() }, "fast");
     });
 
   };
