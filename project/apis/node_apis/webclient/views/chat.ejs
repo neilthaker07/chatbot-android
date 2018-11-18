@@ -128,7 +128,7 @@
     formData.append('file', blob);
 
       $.ajax({
-        url: 'http://localhost:8000/conversation/voice',
+        url: window.location.href + 'conversation/voice',
         type: 'post',
         contentType: false,
         cache: false,
@@ -190,7 +190,7 @@
   	$('.contact.active .preview').html('<span>You: </span>' + message);
   	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
-    $.post("http://localhost:8000/conversation/ask", {userQuery: message}, function(data){
+    $.post( window.location.href + "conversation/ask", {userQuery: message}, function(data){
 
         if(data.intentName == 'image'){
           $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' +
