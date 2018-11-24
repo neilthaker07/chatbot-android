@@ -1,12 +1,25 @@
 {"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
         {
-            "tag":"lottie_api",
+            "tag":"lottie",
             "patterns":
             [
                 "What is Lottie library?",
                 "What about Lottie?",
                 "How Lottie can be used?",
-                "What is the use of Lottie ibrary?",
+                "What is the use of Lottie library?",
                 "Tell me about Lottie, please."
             ],
             "responses": ["Lottie parses Adobe After Effects animations exported as JSON.",
@@ -14,13 +27,13 @@
             ]
         },
         {
-            "tag":"toasty_api",
+            "tag":"toasty",
             "patterns":
             [
                 "What is Toasty library?",
                 "What about Toasty?",
                 "How Toasty can be used?",
-                "What is the use of Toasty ibrary?",
+                "What is the use of Toasty library?",
                 "Tell me about Toasty, please."
             ],
             "responses": [
@@ -29,29 +42,102 @@
             ]
         },
         {
-            "tag":"store_api",
+            "tag":"store",
             "patterns":
             [
                 "What is Store library?",
                 "What about Store?",
                 "How Store can be used?",
-                "What is the use of Store ibrary?",
+                "What is the use of Store library?",
                 "Tell me about Store, please."
             ],
             "responses": [
-                "Store is a library for Async Data Loading and Caching. Want to know about flows?",
-                "Async data loading and caching can be  done by Store library. Want to know about flows?"
+                "Store is a library for Async Data Loading and Caching.",
+                "Async data loading and caching can be  done by Store library."
             ],
             "context_set": "rentalday"
         },
-        {"tag": "flows",
-         "patterns": ["flows"],
-         "responses": 
+        {
+            "tag": "flows",
+             "patterns": ["flows"],
+             "responses": 
+                [
+                    "You can check many flows such as data requests, caching and parsing.", 
+                    "Check flows like data request, caching and parsing."
+                ],
+            "context_filter": "rentalday2"
+        },
+        {
+            "tag":"gson",
+            "patterns":
             [
-                "You can check many flows such as data requests, caching and parsing.", 
-                "Check flows like data request, caching and parsing."
+                "What is Gson library?",
+                "What about Gson?",
+                "How Gson can be used?",
+                "What is the use of Gson library?",
+                "Tell me about Gson, please."
             ],
-         "context_filter": "rentalday"
+            "responses": [
+                "Java library used for serializing and deserializing Java objects from and into JSON"
+            ]
+        },
+        {
+            "tag":"retrofit",
+            "patterns":
+            [
+                "What is retrofit library?",
+                "What about retrofit?",
+                "How retrofit can be used?",
+                "What is the use of retrofit library?",
+                "Tell me about retrofit, please."
+            ],
+            "responses": [
+                "Retrofit turns your REST API into a Java interface.",
+                "It’s an elegant solution for organizing API calls in a project"
+            ]
+        },
+        {
+            "tag":"eventbus",
+            "patterns":
+            [
+                "What is eventbus library?",
+                "What about eventbus?",
+                "How eventbus can be used?",
+                "What is the use of eventbus library?",
+                "Tell me about eventbus, please."
+            ],
+            "responses": [
+                "EventBus is a library that simplifies communication between different parts of your application."
+            ]
+        },
+        {
+            "tag":"activeandroid",
+            "patterns":
+            [
+                "What is activeandroid library?",
+                "What about activeandroid?",
+                "How activeandroid can be used?",
+                "What is the use of activeandroid library?",
+                "Tell me about activeandroid, please."
+            ],
+            "responses": [
+                "ActiveAndroid is an ORM for Android. It’s an abstraction over SQLite which allows you to communicate with a database on a device without writing SQL statements. "
+            ]
+        },
+        {
+            "tag":"uil",
+            "patterns":
+            [
+                "What is uil?",
+                "What about uil?",
+                "How uil can be used?",
+                "What is the use of uil library?",
+                "Tell me about uil, please."
+            ],
+            "responses": [
+                "UIL is a library which provides asynchronous, out of the box loading and caching of images."
+            ]
         }
+
    ]
 }

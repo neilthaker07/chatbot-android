@@ -170,10 +170,10 @@ def response(sentence, userID='123', show_details=False):
 
             results.pop(0)
 
-print(response('Can you please tell me what is store?'))
-print(response('flows'))
-print(response('bro, whats a Toasty?'))
+print(response('what is retrofit library?')) # context of previous question
+print(response('whats a toasty?'))
 print(response('tell me something about lottie.'))
+print(response('Can you please tell me what is store?'))
 # classify('is your shop open today?')
 # response('is your shop open today?')
 # response('do you take cash?')
