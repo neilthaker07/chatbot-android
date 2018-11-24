@@ -1,0 +1,91 @@
+Question.Answer
+"Android","Android is an open-source. Linux-based operating system used in mobiles. tablets. televisions. etc."
+founder_Android?,Andy Rubin.
+"application Architecture","Following is a list of components of Android application architecture: Used to perform background functionalities.
+Used to perform the interconnection between activities and the data passing mechanism.Resource Externalization:strings and graphics.Notification: light. sound. icon. notification. dialog box and toast.Content Providers: It will share the data between applications."
+"code names","Aestro
+Blender
+Cupcake
+Donut
+Eclair
+Froyo
+Gingerbread
+Honeycomb
+Ice Cream Sandwich
+Jelly Bean
+KitKat
+Lollipop
+Marshmallow"
+advantages_Android,"Open-source: It means no license. distribution and development fee."
+"languages support","An android app can be developed in Java. C/C++ also using android NDK (Native Development Kit). It makes the performance faster. It should be used with Android SDK."
+"core building blocks","The core building blocks of Android are:     Activity
+View
+Intent
+Service
+Content Provider
+Fragment etc. "
+"activity","Activity is like a frame or window in java that represents GUI. It represents one screen of android."
+"life cycle methods of activity","There are 7 life-cycle methods of activity. They are as follows: onCreate()
+onStart()
+onResume()
+onPause()
+onStop()
+onRestart()
+onDestroy()"
+"intent","It is a kind of message or information that is passed to the components. It is used to launch an activity. display a web page. send SMS. send email. etc. There are two types of intents in android: Implicit Intent and Explicit Intent
+"Android toast","An android toast provides feedback to the users about the operation being performed by them. It displays the message regarding the status of operation initiated by the user."
+"explicit intent","An explicit intent is used to invoke the activity class."
+service android,"A service is a component that runs in the background. It is used to play music. handle network transaction. etc."
+AAPT,AAPT is an acronym for android asset packaging tool. It handles the packaging process.
+content provider,A content provider is used to share information between Android applications.
+fragment,The fragment is a part of Activity by which we can display multiple screens on one activity.
+ADB,ADB stands for Android Debug Bridge. It is a command line tool that is used to communicate with the emulator instance.
+NDK,"NDK stands for Native Development Kit. By using NDK. you can develop a part of an app using native language such as C/C++ to boost the performance."
+ANR,ANR stands for Application Not Responding. It is a dialog box that appears if the application is no longer responding.
+APK format,"APK is a short form stands for Android Packaging Key. It is a compressed key with classes. UI's. supportive assets and manifest. All files are compressed to a single file is called APK."
+language support,Android applications are written by using the java (Android SDK) and C/C++ (Android NDK).
+ADT,ADT stands for Android Development Tool. It is used to develop the applications and test the applications.
+View Group,View Group is a collection of views and other child views. It is an invisible part and the base class for layouts.
+Adapter,An adapter is used to create a child view to present the parent view items.
+kernel,Android is a customized Linux 3.6 kernel.
+application Widgets,Application widgets are miniature application views that can be embedded in other applications and receive periodic updates.
+singleton class,A singleton class is a class which can create only an object that can be shared by all other classes.
+sleep mode,"In sleep mode. CPU is slept and doesn't accept any commands from android device except Radio interface layer and alarm."
+DDMS,"DDMS stands for Dalvik Debug Monitor Server. It gives the wide array of debugging features: Port forwarding services
+Screen capture
+Thread and heap information 
+Network traffic tracking
+Location data spoofing"
+Android Architecture,"The Android architecture consists of 4 components: Linux Kernal
+Libraries 
+Android Framework 
+Android Applications"
+portable wi-fi hotspot,The portable wi-fi hotspot is used to share internet connection to other wireless devices.
+dialog box,"Alert Dialog
+Progress Dialog
+Date Picker Dialog
+Time picker Dialog"
+exceptions,"Inflate Exception
+Surface.OutOfResourceException
+SurfaceHolder.BadSurfaceTypeException
+WindowManager.BadTokenException"
+tools ,"JDK
+Eclipse+ADT plugin 
+SDK Tools".
+"Android Runtime","Android includes a set of core libraries that provides most of the functionality available in the corelibraries of the Java programming language. Every Android application runs in its own process. with its own instance of the Dalvik virtual machine. Dalvik has been written so that a device can run multiple VMs efficiently. The Dalvik VM executes files in the Dalvik Executable (.dex) format which is optimized for minimal memory footprint. The VM is register-based. and runs classes compiled by a Java language compiler that have been transformed into the .dex format by the included ?dx? tool.	"
+"Dalvik","The name of Androids virtual machine. The Dalvik VM is an interpreter-only virtual machine that executes files in the Dalvik Executable (.dex) format. a format that is optimized for efficient storage and memory-mappable execution. The virtual machine is register-based. and it can run classes compiled by a Java language compiler that have been transformed into its native format using the included ?dx? tool. The VM runs on top of Posix-compliant operating systems. which it relies on for underlying functionality (such as threading and low level memory management). The Dalvik core class library is intended to provide a familiar development base for those used to programming with Java Standard Edition. but it is geared specifically to the needs of a small mobile device.	"
+"Seapine Software","Seapine's software development and testing tools streamline your development process. saving you significant time and money. Enjoy feature-rich tools that are flexible enough to work in any software development environment. With Seapine integrated tools. every step in the developmentprocess feeds critical information into the next step. letting you focus on developing high quality software in less time.	"
+"Ddms","Dalvik Debug Monitor Service. a GUI debugging application shipped with the SDK. It provides screen capture. log dump. and process examination capabilities.	"
+"G1 Phone",The Android T-Mobile G1 phone is the world's first Android-powered mobile phone developed by HTC and T-Mobile.
+"Intent Receiver",An application class that listens for messages broadcast by calling Context.broadcastIntent	
+"apk Extension?","The extension for an Android package file. which typically contains all of the files related to a single Android application. The file itself is a compressed collection of an AndroidManifest.xml file.application code (.dex files). resource files. and other files. A project is compiled into a single .apk file.	"
+"Layout Resource?",An XML file that describes the layout of an Activity screen.	
+"Manifest","An XML file associated with each Application that describes the various activies. intent filters. services. and other items that it exposes.	"
+"Theme?","A set of properties (text size. background color. and so on) bundled together to define various default display settings. Android provides a few standard themes. listed in R.style (starting with ?Theme_?)."
+"Uris?","Android uses URI strings both for requesting data (e.g.. a list of contacts) and for requesting actions (e.g.. opening a Web page in a browser). Both are valid URI strings. but have different values. All requests for data must start with the string ?content://?. Action strings are valid URIs that can be handled appropriately by applications on the device; for example. a URI starting with ?http://? will be handled by the browser.	"
+"Action?",A description of something that an Intent sender desires.	
+"Intent?","A class (Intent) describes what a caller desires to do. The caller sends this intent to Android's intent resolver. which finds the most suitable activity for the intent.	"
+"Resource","A user-supplied XML. bitmap. or other file. injected into the application build process. which can later be loaded from code.	"
+"Sticky Intent"," i.e. the Intent you are sending stays around after the broadcast is complete. so that others can quickly retrieve that data through the return value of registerReceiver (BroadcastReceiver. IntentFilter). In all other ways. this behaves the same as sendBroadcast (Intent).
+One example of a sticky broadcast sent via the operating system is ACTION_BATTERY_CHANGED. When you call registerReceiver () for that action -- even with a null BroadcastReceiver -- you get the Intent that was last broadcast for that action. Hence. you can use this to find the state of the battery without necessarily registering for all future state changes in the battery.	"
+"Open Handset Alliance","The OHA is a consortium of 30 technology and mobile companies that have joined hands to accelerate innovation in mobile technology and at the same time offer the end users a better. costeffective and richer mobile experience."
