@@ -1,4 +1,4 @@
-// Instantiate a DialogFlow client.
+  // Instantiate a DialogFlow client.
 const dialogflow = require('dialogflow');
 const express = require('express');
 const multer = require('multer');
@@ -72,6 +72,8 @@ router.post('/voice', upload.single("file"), function(req,res){
 // Detecting Intent from the Text
 router.post('/ask',function(req,res){
 
+  var intentDisplayName = "";
+
   var userQuery = req.body.userQuery;
 
   // The text query request.
@@ -92,7 +94,11 @@ router.post('/ask',function(req,res){
       const result = responses[0].queryResult;
       logQueryResult(sessionClient, result);
 
-      res.send({fulfillmentText: result.fulfillmentText, intentName: result.intent});
+      if(result.intent) {
+        intentDisplayName = result.intent.displayName;
+      }
+
+      res.send({fulfillmentText: result.fulfillmentText, intentName: intentDisplayName});
     })
     .catch(err => {
       console.error('ERROR:', err);
