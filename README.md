@@ -17,10 +17,23 @@ virtualenv --system-site-packages -p python3 venv # Use Python 3.n
  
 cd tensorflow  
  
-python tflow.py  
+python tflow_file.py  
  
-
-
+Sample Results: (From venv for anrdoid libraries questions)
+------------------------------------------------------------------
+'what is retrofit library?'  
+'whats a toasty?'  
+'tell me something about lottie.'  
+'Can you please tell me what is store?'  
+  
+Answers:
+-----------
+Retrofit turns your REST API into a Java interface.  
+Toasty is for creating customized Toasts  
+Adobe after effects parsing works well with Lottie.   
+Store is a library for Async Data Loading and Caching.  
+  
+  
 sudo ssh -i cmpe295b.pem ubuntu@13.58.23.159  
 
 go to tmux : tmux attach -t 0 
