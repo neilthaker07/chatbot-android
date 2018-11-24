@@ -1,5 +1,4 @@
 # chatbot-sjsu
-chatbot
 
 
 Gantt Chart:
