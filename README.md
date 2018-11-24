@@ -18,7 +18,7 @@ cd tensorflow
  
 python tflow_file.py  
  
-Sample Results: (From venv for anrdoid libraries questions)
+Sample Results: (From venv for android libraries questions)
 ------------------------------------------------------------------
 'what is retrofit library?'  
 'whats a toasty?'  
