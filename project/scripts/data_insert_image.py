@@ -3,8 +3,9 @@ from pymongo import MongoClient
 import re, gridfs, csv
   
 try: 
-    #conn = MongoClient("mongodb://adminUser:purveshFALL2018@13.58.23.159:27017") 
-    conn = MongoClient() 
+    url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/?authSource=admin&authMechanism=SCRAM-SHA-1"
+    conn = MongoClient(url) 
+    #conn = MongoClient() 
     print("Connected successfully!!!") 
 except:   
     print("Could not connect to MongoDB") 
@@ -27,8 +28,9 @@ for i in range(len(fileNames)):
     data_in_list=[]
 
     #  /home/neil/Neil_Work/MS_SJSU/295A/ui_component_repo/awesome-android-ui
-    with open('../data/data-'+fileNames[i]+'.csv', 'rb') as dataFile:
+    with open('../data/data-'+fileNames[i]+'.csv', 'r') as dataFile:
         reader = csv.reader(dataFile)
+        print(reader)
         data_in_list = list(reader)
 
     data_in_list.pop(0) # remove header
@@ -38,11 +40,10 @@ for i in range(len(fileNames)):
     for each_row in data_in_list:
         vals = (str(each_row)).strip().split('|')
         entity = vals[0].split(']')[0].split('[')[2]
-        #entity = entity.replace(".", " ")
-        entity = entity.translate(None, '.')
-        entity = entity.strip()
-
-        #print(entity)
+        entity = entity.replace(".", "_")
+        entity = entity.replace("-", "_")
+        entity = entity.replace(" ", "_")
+        entity = entity.lower()
 
         url = vals[2]
 
