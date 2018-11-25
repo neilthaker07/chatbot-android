@@ -194,7 +194,8 @@
 
         if(data.intentName == 'image'){
           $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' +
-              '<img id="demo" style="height:300px;width:300px;border-radius:0" src=/images/glassactionbar.png></p></li>').appendTo($('.messages ul'));
+              '<img id="demo" style="height:300px;width:300px;border-radius:0" src=/images/' + data.fulfillmentText + '></p></li>').
+              appendTo($('.messages ul'));
         } else {
           $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' +
               data.fulfillmentText + '</p></li>').appendTo($('.messages ul'));
