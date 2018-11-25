@@ -69,7 +69,7 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 							conn.once('open', function(){
 
 								var gfs = Grid(conn.db);
-								var writestream = fs.createWriteStream(path.join(__dirname, '/'+answer));
+								var writestream = fs.createWriteStream(path.join(__dirname, '/../../webclient/public/images/'+answer));
 								try {
 
 									var readstream = gfs.createReadStream({
@@ -79,12 +79,12 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 									console.log("readstream:::::"+readstream);
 
 									readstream.pipe(writestream, function(){
-										res.sendFile(path.join(__dirname, '/'+answer));	
+										res.sendFile(path.join(__dirname, '/../../webclient/public/images/'+answer));
 									});
 									writestream.on('close', function(){
 										console.log(" written new file image - ");
 									});
-								} 
+								}
 								catch (err3) {
 									console.log("image not found....");
 								    console.log(err3);
