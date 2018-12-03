@@ -177,7 +177,7 @@
 
   	$("#status-options").removeClass("active");
   });
-
+  
   function newMessage() {
   	message = $(".message-input input").val();
 
@@ -192,16 +192,28 @@
 
     $.post( window.location.href + "conversation/ask", {userQuery: message}, function(data){
 
-        if(data.intentName == 'image' && data.fulfillmentText != ""){
-          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' +
-              '<img id="demo" style="height:300px;width:300px;border-radius:0" src=/images/' + data.fulfillmentText + '></p></li>').
-              appendTo($('.messages ul'));
-        } else if(data.fulfillmentText == "")  {
+        if(data.intentName == 'image'){
 
-          var defaultMessage = "Sorry! We couldn't find what you are looking for.";
-          
-          $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' + defaultMessage
-              + '</p></li>').appendTo($('.messages ul'));
+          var img = new Image();
+          img.src = "/images/" + data.fulfillmentText;
+
+          img.onload = function() {
+
+            $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' +
+                '<img id="demo" style="height:300px;width:300px;border-radius:0" src=/images/' + data.fulfillmentText + '></p></li>').
+                appendTo($('.messages ul'));
+
+          };
+
+          img.onerror = function() {
+            var defaultMessage = "Sorry we couldn't find anything for your requested query. Please try again!!";
+
+            $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' + defaultMessage
+                + '</p></li>').appendTo($('.messages ul'));
+          };
+
+
+
         } else {
           $('<li class="replies"><img src="/images/chatbot.png" alt="" /><p>' +
               data.fulfillmentText + '</p></li>').appendTo($('.messages ul'));
