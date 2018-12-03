@@ -9,7 +9,6 @@ const fs = require('fs');
 const projectId = 'hello-world-agent-906ac'; //https://dialogflow.com/docs/agents#settings
 const sessionId = 'quickstart-session-id';
 const languageCode = 'en-US';
-const sampleRateHertz = 44100
 const audioFileUploadLocation = 'uploads/'
 const audioFileExtension = '.wav'
 
@@ -44,7 +43,6 @@ router.post('/voice', upload.single("file"), function(req,res){
         session: sessionPath,
         queryInput: {
           audioConfig: {
-            sampleRateHertz: sampleRateHertz,
             languageCode: languageCode,
           },
         },

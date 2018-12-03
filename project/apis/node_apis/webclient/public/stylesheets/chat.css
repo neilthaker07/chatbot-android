@@ -601,6 +601,7 @@ body {
 @media screen and (min-width: 735px) {
   #frame .content .messages ul li p {
     max-width: 300px;
+    word-break: break-word;
   }
 }
 #frame .content .message-input {
