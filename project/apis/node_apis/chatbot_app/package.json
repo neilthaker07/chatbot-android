@@ -15,7 +15,7 @@
     "fs": "0.0.1-security",
     "gridfs-stream": "^1.1.1",
     "mongodb": "^3.1.4",
-    "mongoose": "^5.2.14",
+    "mongoose": "^5.7.5",
     "morgan": "~1.8.1",
     "path": "^0.12.7",
     "serve-favicon": "~2.4.2"
