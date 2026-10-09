@@ -23,8 +23,8 @@ router.get('/answer/:intent/:entity', function(req, res, next) {
 	var collectionName = intentInput==='ui_element' ? 'intent' : intentInput;
 
 	var mongoClient = require('mongodb').MongoClient;
-	var url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/?authSource=admin&authMechanism=SCRAM-SHA-1";
-	var url2="mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/"+dbName+"?authSource=admin";
+	var url = "mongodb://adminUser?authSource=admin&authMechanism=SCRAM-SHA-1";
+	var url2="mongodb://adminUser"+dbName+"?authSource=admin";
 	//var url = "mongodb://localhost:27017";
 	//var url2=url;
 
