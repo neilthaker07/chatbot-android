@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import re, gridfs, csv
   
 try: 
-    url = "mongodb://adminUser:purveshFALL2018@13.58.23.159:27017/?authSource=admin&authMechanism=SCRAM-SHA-1"
+    url = "mongodb://adminUser?authSource=admin&authMechanism=SCRAM-SHA-1"
     conn = MongoClient(url) 
     #conn = MongoClient() 
     print("Connected successfully!!!") 
